@@ -27,7 +27,7 @@ class _MovieListState extends State<MovieList> {
   }
   Future<void> _fetchPage(int pageKey) async {
     try {
-      final movies = await movieService.getMovies(widget.movieSection);
+      final movies = await movieService.getMovies(widget.movieSection, pageKey +1);
       final isLastPage = movies.length < Constant.PAGE_SIZE;
       if (isLastPage) {
         _pagingController.appendLastPage(movies);

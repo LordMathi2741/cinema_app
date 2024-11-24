@@ -5,10 +5,10 @@ import '../../domain/model/movieDTO.dart';
 import 'package:dio/dio.dart';
 class MovieService{
 
-  Future<List<MovieDTO>> getMovies(String section) async {
+  Future<List<MovieDTO>> getMovies(String section, int page) async {
     try {
       final request = Dio();
-      final url = "${Constant.BASE_URL}$section?api_key=${Constant.API_KEY}&language=${Constant.LANGUAGE}&page=${Constant.page}";
+      final url = "${Constant.BASE_URL}$section?api_key=${Constant.API_KEY}&language=${Constant.LANGUAGE}&page=$page";
       final response = await request.get(url);
       if (response.statusCode == HttpStatus.ok) {
         final json = response.data;

@@ -9,7 +9,7 @@ class MovieSectionSwiper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
-      height: 440,
+      height: 460,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

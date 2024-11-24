@@ -1,5 +1,4 @@
 import 'package:cinema/core/movie_sections.dart';
-import 'package:cinema/features/movies/presentation/widgets/movie_list.dart';
 import 'package:cinema/features/movies/presentation/widgets/movie_section_swiper.dart';
 import 'package:cinema/shared/presentation/widgets/custom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
