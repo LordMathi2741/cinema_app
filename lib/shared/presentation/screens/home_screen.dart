@@ -70,8 +70,44 @@ class HomeScreen extends StatelessWidget {
                         onPressed: () async{
                            try{
                              await firebaseExternalService.signIn(emailController.text, passwordController.text);
-                           } finally{
                              Navigator.push(context, MaterialPageRoute(builder: (_) => const CinemaMenuScreen()));
+                           } catch (_){
+                             showDialog(
+                                 context: context,
+                                 builder: (BuildContext context){
+                                   return AlertDialog(
+                                     title: const Text(
+                                         "Invalid email or password",
+                                       style: TextStyle(
+                                         fontWeight: FontWeight.bold,
+                                         fontSize: 20
+                                       ),
+                                     ),
+                                     actions: [
+                                       TextButton(
+                                           onPressed: (){
+                                             Navigator.push(context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+                                           },
+                                         style: TextButton.styleFrom(
+                                           backgroundColor: Colors.red,
+                                           foregroundColor: Colors.white
+                                         ),
+                                           child: const Text("Cancel"),
+                                       ),
+                                       TextButton(
+                                         onPressed: (){
+                                           Navigator.push(context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+                                         },
+                                         style: TextButton.styleFrom(
+                                             backgroundColor: Colors.black,
+                                             foregroundColor: Colors.white
+                                         ),
+                                         child: const Text("Accept"),
+                                       )
+                                     ],
+                                   );
+                                 }
+                             );
                            }
                         },
                         child: const Text(
