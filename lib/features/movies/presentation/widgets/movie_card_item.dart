@@ -50,7 +50,9 @@ class _MovieCardItemState extends State<MovieCardItem> {
             const SizedBox(height: 10),
             Text(
               widget.title,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold
+              ),
             ),
             IconButton(
               onPressed: () async {

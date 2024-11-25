@@ -15,7 +15,7 @@ class MovieItemInformation extends StatelessWidget {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return [
               SliverAppBar(
-              expandedHeight: 520,
+              expandedHeight: MediaQuery.of(context).size.height / 1.5,
               floating: false,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(

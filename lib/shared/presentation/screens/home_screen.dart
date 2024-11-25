@@ -3,7 +3,6 @@ import 'package:cinema/features/movies/presentation/screens/cinema_menu_screen.d
 import 'package:cinema/shared/presentation/widgets/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cinema/core/resource.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
